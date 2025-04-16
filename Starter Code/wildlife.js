@@ -18,6 +18,12 @@ const forestHabitats = ["Forest A", "Forest B"];
 const savannahHabitats = ["Savannah C", "Savannah D"];
 // TODO: You are given two arrays of habitat names. Use the spread operator to combine them into a comprehensive list of protected areas within the sanctuary.
 
+const protectedHabitats = [...forestHabitats, ...savannahHabitats];
+console.log("Protected Habitats in the Sanctuary:");
+protectedHabitats.forEach(habitat => {
+	console.log(`- ${habitat}`);
+})
+
 /* Task 3: Update Conservation Status */
 const rhinoStatus = {
 	population: 500,
