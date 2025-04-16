@@ -1,6 +1,16 @@
 /* Task 1: Track Animal Sightings */
 // TODO: Write a function with rest parameters to print sightings of different animals within the sanctuary. This function should accept an arbitrary number of animal names.
 
+const animalSightings = ["Lion", "Tiger", "Possum", "Wooly Mamoth", "Sasquatch"]; 
+
+function trackSightings(...animals) {
+	console.log("Animal Sightings in the Sanctuary:");
+	animals.forEach(animal => {
+		console.log(`- ${animal}`);
+});
+}
+trackSightings(...animalDightings);
+
 
 
 /* Task 2: Merge Habitat Areas */
