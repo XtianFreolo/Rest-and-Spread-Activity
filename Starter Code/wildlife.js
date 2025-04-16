@@ -48,7 +48,22 @@ const lionProfile = {
 	age: 5,
 	species: "Lion"
 };
+
+
 // TODO: Duplicate an animal profile object using a shallow copy. Add genetic diversity information using the `genetics` property to this copy. Observe and explain how changes to nested properties affect both the original and the copied object.
+
+const genetics = {
+	dna: "LionDNA123",
+}
+
+
+const lionProfileUpdated = {...lionProfile,
+	 genetics
+	};
+
+console.log(`Lion Profile Updated:`);
+console.log(lionProfileUpdated));
+
 /*
  * Observations:
  * TODO: Explain here.
