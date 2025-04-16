@@ -9,7 +9,7 @@ function trackSightings(...animals) {
 		console.log(`- ${animal}`);
 });
 }
-trackSightings(...animalDightings);
+trackSightings(...animalSightings);
 
 
 
@@ -63,7 +63,7 @@ const lionProfileUpdated = {
 };
 
 console.log(`Lion Profile Updated:`);
-console.log(lionProfileUpdated));
+console.log(lionProfileUpdated);
 
 /*
  * Observations:
@@ -76,6 +76,8 @@ console.log(lionProfileUpdated));
  */
 
 /* Task 5: Analyze Ecosystem Health */
+
+
 const ecosystemHealth = {
 	waterQuality: "Good",
 	foodSupply: {
@@ -83,6 +85,24 @@ const ecosystemHealth = {
 		carnivores: "Sufficient"
 	}
 };
+
+const ecosystemHealthUpdated = {
+	...ecosystemHealth, 
+	foodSupply: {
+		...ecosystemHealth.foodSupply,
+	}
+}
+  
+// Modify something in a nested object looks like this
+
+ecosystemHealthUpdated.foodSupply.herbivores = "Scarce";
+ecostystemHealthUpdated.waterQuality = "Poor";
+
+
+console.log("Ecosystem Health Updated:");
+console.log("Water Quality:", ecosystemHealthUpdated.waterQuality);
+console.log("Food Suply of Herbivores:", ecosystemHealthUpdated.foodSupply.herbivores);
+
 // TODO: You are given an object with a nested structure detailing the ecosystem's health, including water quality and food supply. Perform a shallow copy and modify a nested property. Observe and explain how changes to nested properties affect both the original and the copied object.
 /*
  * Observations:
