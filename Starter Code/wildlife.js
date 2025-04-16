@@ -54,12 +54,13 @@ const lionProfile = {
 
 const genetics = {
 	dna: "LionDNA123",
-}
+};
 
 
-const lionProfileUpdated = {...lionProfile,
+const lionProfileUpdated = {
+	...lionProfile,
 	 genetics
-	};
+};
 
 console.log(`Lion Profile Updated:`);
 console.log(lionProfileUpdated));
@@ -67,6 +68,11 @@ console.log(lionProfileUpdated));
 /*
  * Observations:
  * TODO: Explain here.
+ * 
+ * This demonstrates that shallow copying using the spread operator does NOT clone nested objects—
+ * it simply copies their references. To prevent this shared mutation, a deep copy would be needed.
+ * 
+ *
  */
 
 /* Task 5: Analyze Ecosystem Health */
